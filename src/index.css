@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{@apply bg-bg text-ink font-body min-h-screen;background:radial-gradient(ellipse at 50% 40%,#101524 0%,#000307 70%)}
+.phaser-bg{position:fixed;inset:0;z-index:0;pointer-events:none}
+.pixelated,.pixelated canvas{image-rendering:pixelated}
+@layer components{
+  .btn{@apply px-6 py-3 font-display font-bold text-xs uppercase tracking-widest text-white rounded border border-white/25 cursor-pointer transition hover:-translate-y-0.5 hover:brightness-110 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:translate-y-0 bg-gradient-to-r from-[#a544ed] via-[#e05ddd] to-[#101524]}
+  .btn-ghost{@apply px-4 py-2 font-display font-semibold text-[11px] uppercase tracking-wider text-neon border border-neon/30 rounded bg-neon/5 hover:bg-neon/15 transition cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed}
+  .card{@apply border border-line rounded-lg bg-panel/80 backdrop-blur p-5}
+  .eyebrow{@apply font-display text-[10px] font-semibold tracking-[.24em] text-mint}
+  .input{@apply w-full bg-black/40 border border-line rounded px-3 py-3 text-sm outline-none focus:border-neon}
+  .choice{@apply text-left border border-line rounded p-3 text-sm cursor-pointer transition hover:border-neon bg-black/30}
+  .choice.on{@apply border-neon bg-neon/10}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
